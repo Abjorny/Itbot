@@ -221,7 +221,8 @@ function test() {
 
 
   function next6(){
-    tg.sendData(datas)
+    tg.sendData(JSON.stringify(datas))
+    
     document.querySelector(".main-2").style=`display:none`
     document.querySelector(".thanks").style=`display:block`
     document.querySelector("body").style=`background:#EEEEEE`
