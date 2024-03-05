@@ -185,7 +185,10 @@ function test() {
   }
 
   function nazad6(){
-    document.querySelector(".main-2").style=`display:none`
+    
+    a = document.querySelector(".main-2").style=`display:none`
+
+
     document.querySelector(".main").style=`display:block`
     document.querySelector("body").style=`background:white`
 
@@ -210,32 +213,11 @@ function test() {
     }
 
   }
-  function next3(){
-    document.getElementById("uchinchisi").style=`display:none`
-    document.getElementById("tortinchisi").style=`display:block`
 
-    document.querySelector(".line-avtive-3").style=` background: #E5E5E5;`
-    document.querySelector(".line-avtive-4").style=` background: #83A1C9;`
-  }
 
-  function next4(){
-    document.getElementById("tortinchisi").style=`display:none`
-    document.getElementById("besh").style=`display:block`
-   
 
-    document.querySelector(".line-avtive-4").style=` background: #E5E5E5;`
-    document.querySelector(".line-avtive-5").style=` background: #83A1C9;`
-  }
 
-  function next5(){
-    document.querySelector(".main-2").style=`display:block`
-    document.querySelector(".main").style=`display:none`
-    document.querySelector("body").style=`background:#EEEEEE`
-    document.querySelector("#becka").style=`background:none `
 
-    document.querySelector("#te").style=` background: #E5E5E5;`
-    document.querySelector("#tes").style=` background: #83A1C9;`
-  }
   function next6(){
     document.querySelector(".main-2").style=`display:none`
     document.querySelector(".thanks").style=`display:block`
@@ -329,17 +311,7 @@ function back2(){
   }
 }
 
-function textaria(){
-  var textaria = document.querySelector("#textaria").value;
-  var textaria2 = document.querySelector("#textarea2").value;
-  if(textaria.length > 0  || textaria2.length > 0){
-    document.querySelector("#next3-btn").style=`background:#2F80ED;`
-  }else{
-    document.querySelector("#next3-btn").style=`background:#83A1C9;`
 
-
-  }
-}
 
 function changeButtonBackground() {
   var radios = document.querySelectorAll('input[name="name"]');
@@ -352,18 +324,175 @@ function changeButtonBackground() {
   });
 }
 
+var datas = {
+             brand: new Array ( ),
+             model: new Array ( ),
+             name: new Text,
+             disc: new Text,
+             process: new Text,
+             country: new Text,
+             gorod: new Text,
+             url: new Text,
+             motiva: new Array( ),
+            
+            };
+
 function inputValue(value) {
   document.querySelector("#input-push1").value = value;
+  a = datas.brand.indexOf(String(value))
+
+  if( a ==-1){
+    console.log('пусто');
+    datas.brand.push(value);
+  }
+  else{
+    console.log('есть такое');
+    datas.brand.splice(a, 1);
+  }
+ 
+
 }
 
 function inputValue1(value) {
   document.querySelector("#input-push2").value = value;
+  a = datas.model.indexOf(String(value))
+
+  if( a ==-1){
+    console.log('пусто');
+    datas.model.push(value);
+  }
+  else{
+    console.log('есть такое');
+    datas.model.splice(a, 1);
+  }
+
+
 }
 function openVapros2(){
   document.querySelector("#vaprosNone2").style=`display:block`
   document.querySelector("body").style=`overflow: hidden;`
+
 }
 function ok2(){
+  
   document.querySelector("#vaprosNone2").style=`display:none`
   document.querySelector("body").style=`overflow: scroll;`
 }
+function textaria(){
+  var textaria = document.querySelector("#textaria").value;
+  var textaria2 = document.querySelector("#textarea2").value;
+  var tim = document.getElementById('chet').textContent;
+  
+
+
+  console.log('zxc')
+  if(textaria.length > 0  || textaria2.length > 0){
+    document.querySelector("#next3-btn").style=`background:#2F80ED;`
+  }else{
+    document.querySelector("#next3-btn").style=`background:#83A1C9;`
+
+
+  }
+}
+
+
+ var button = document.getElementById('next5-btn');
+ button.addEventListener("click", function() {
+
+    console.log("Кнопка нажата.");
+   
+  });
+
+ function next3(){
+    nameApp = document.getElementById("textarea2");
+    discpr = document.getElementById("textaria");
+    console.log(nameApp.value);
+    console.log(discpr.value);
+    datas.name = nameApp.value;
+    datas.discpr = discpr.value;
+    document.getElementById("uchinchisi").style=`display:none`
+    document.getElementById("tortinchisi").style=`display:block`
+    document.querySelector(".line-avtive-3").style=` background: #E5E5E5;`
+    document.querySelector(".line-avtive-4").style=` background: #83A1C9;`
+  }
+  function next4(){
+    
+    a = document.getElementById("dataformer");
+    const formData = new FormData(a)
+    count = document.getElementById('input-country').value;
+    gorod = document.getElementById('input-gorod').value;
+    tape = formData.get('name')
+
+    datas.country = count
+    datas.gorod = gorod
+    datas.process = tape
+
+
+    console.log(datas.country,datas.gorod,datas.process)
+    document.getElementById("tortinchisi").style=`display:none`
+    document.getElementById("besh").style=`display:block`
+   
+
+    document.querySelector(".line-avtive-4").style=` background: #E5E5E5;`
+    document.querySelector(".line-avtive-5").style=` background: #83A1C9;`
+
+  }
+  
+  function inputsic(value){
+    a = datas.motiva.indexOf(String(value))
+    console.log(value)
+    if( a ==-1){
+      console.log('пусто');
+      datas.motiva.push(value);
+    }
+    else{
+      console.log('есть такое');
+      datas.motiva.splice(a, 1);
+    }
+    
+  }
+
+  function next5(){
+    url = document.getElementById('url-project')
+    datas.url  = url.value
+
+    
+    
+    console.log(datas.model,datas.motiva)
+    document.querySelector(".main-2").style=`display:block`
+    document.getElementById('itogname').innerHTML = datas.name
+     = +String(datas.process)
+    document.getElementById('desreaser').innerHTML =String(datas.discpr) + "<br>"
+
+    var z =""
+    var mo = ""
+    for(var i = 0;i<datas.model.length; i++){
+      z = "<button>" +String(datas.model[i]) +"</button>" + z
+      console.log(i)
+    }
+    for(var i = 0;i<datas.motiva.length; i++){
+      mo = "<button>" +String(datas.motiva[i]) +"</button>" +mo
+      console.log(i)
+    }
+
+
+    var d = ""
+    for(var i = 0;i<datas.brand.length; i++){
+      d =  String(datas.brand[i]) +", " + d
+      console.log(datas.brand[i])
+      
+    }
+
+    document.getElementById('listprof').innerHTML = z
+    document.getElementById('mova').innerHTML = mo
+    document.getElementById('luser').innerHTML = d
+    document.getElementById('proall').innerHTML ="<span>" +String(datas.process) +"</span> <br>"
+    document.getElementById('procsero').innerHTML="<span>" +String(datas.process) +"</span> "
+
+    document.querySelector(".main").style=`display:none`
+    document.querySelector("body").style=`background:#EEEEEE`
+    document.querySelector("#becka").style=`background:none `
+
+    document.querySelector("#te").style=` background: #E5E5E5;`
+    document.querySelector("#tes").style=` background: #83A1C9;`
+  }
