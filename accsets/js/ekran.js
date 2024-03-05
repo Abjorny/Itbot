@@ -1,3 +1,5 @@
+
+tg =window.Telegram.WebApp
 var checkboxes = document.getElementsByClassName('input-checkbox');
 
 Array.from(checkboxes).forEach(function(checkbox) {
@@ -219,6 +221,7 @@ function test() {
 
 
   function next6(){
+    tg.sendData(datas)
     document.querySelector(".main-2").style=`display:none`
     document.querySelector(".thanks").style=`display:block`
     document.querySelector("body").style=`background:#EEEEEE`
@@ -382,7 +385,7 @@ function textaria(){
   var textaria = document.querySelector("#textaria").value;
   var textaria2 = document.querySelector("#textarea2").value;
   var tim = document.getElementById('chet').textContent;
-  
+
 
 
   console.log('zxc')
