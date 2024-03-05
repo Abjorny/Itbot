@@ -46,7 +46,6 @@
 
         <!-- page1 -->
 
-
         <div class="clone-blog" id="birincisi">
             <p class="descri">Кто нужен в кофаундеры</p>
             <div class="kofaunder-blog" id="bir">
@@ -54,14 +53,17 @@
                     <input type="text">
                     <button><img src="./accsets/image/Frame 9.svg" alt=""></button>
                 </div>
+         
                 <div class="scroll-checkbox">
                     <div class="checkbox-blog-1">
+                      
                         <div class="input-checkbox" onclick="inputValue('Product/Project')">
                             <span style="display: none;" id="span1"><i class='bx bx-check'></i></span>
                         </div>
                         <div class="input-text" >
                             <p>Product/Project</p>
                         </div>
+         
                     </div>
                     
                     <div class="checkbox-blog-1">
@@ -139,9 +141,10 @@
                     </div>
                     
                 </div>
+            
                 <div class="input-variant">
                     <input type="text" placeholder="Ваш вариант" id="input-push1" oninput="back()">
-                    <button onclick="push()"><span>OK</span></button>
+                    <button type="button" onclick="push()"><span>OK</span></button>
                 </div>
                 <div class="viber-close" >
                     
@@ -149,13 +152,12 @@
                 <div class="bnt-next">
                     <div class="btn-nazad"></div>
                     <div class="btn-next-prev" onclick="next()">
-                        <button>Далее   <span><i class='bx bx-right-arrow-alt'></i></span></button>
+                        <button type="button">Далее   <span><i class='bx bx-right-arrow-alt'></i></span></button>
                     </div>
                 </div>
             </div>
         </div>
-
-
+ 
         <!-- page2 -->
 
         <div class="clone-blog" id="ikincisi">
@@ -305,7 +307,7 @@
                         <p>Описание проекта:</p>
                     </div>
                     <div class="bir">
-                        <span>1024</span>
+                        <span id ="chet">1024</span>
                     </div>
                 </div>
                 <div class="input-post">
@@ -338,10 +340,12 @@
                 </div>
             </div>
             <div class="kofaunder-blog" id="bir">
+                <form id = "dataformer">
                 <div class="checkbox-blog-info">
+                    
                     <div class="won-check">
                         <div class="radio">
-                            <input id="radio" type="radio" onchange="changeButtonBackground()" name="name">
+                            <input id="radio" type="radio" onchange="changeButtonBackground()" name="name" value="Учебный проект">
                         </div>
                         <div class="radio-text">
                             <p>Учебный проект</p>
@@ -349,7 +353,7 @@
                     </div>
                     <div class="won-check">
                         <div class="radio">
-                            <input id="radio2"  type="radio"  onchange="changeButtonBackground()" name="name">
+                            <input id="radio2"  type="radio"  onchange="changeButtonBackground()" name="name" value="Хакатон">
                         </div>
                         <div class="radio-text">
                             <p>Хакатон</p>
@@ -357,7 +361,7 @@
                     </div>
                     <div class="won-check">
                         <div class="radio">
-                            <input id="radio"  type="radio"  onchange="changeButtonBackground()" name="name">
+                            <input id="radio"  type="radio"  onchange="changeButtonBackground()" name="name" value="Идея / концепция">
                         </div>
                         <div class="radio-text">
                             <p>Идея / концепция</p>
@@ -365,7 +369,7 @@
                     </div>
                     <div class="won-check">
                         <div class="radio">
-                            <input id="radio"  type="radio"  onchange="changeButtonBackground()" name="name">
+                            <input id="radio"  type="radio"  onchange="changeButtonBackground()" name="name" value="Запуск стартапа / нет продаж">
                         </div>
                         <div class="radio-text">
                             <p>Запуск стартапа / нет продаж</p>
@@ -373,7 +377,7 @@
                     </div>
                     <div class="won-check">
                         <div class="radio">
-                            <input id="radio"  type="radio"  onchange="changeButtonBackground()" name="name">
+                            <input id="radio"  type="radio"  onchange="changeButtonBackground()" name="name" value="Есть первые пользователи / продажи">
                         </div>
                         <div class="radio-text">
                             <p>Есть первые пользователи / продажи</p>
@@ -381,7 +385,7 @@
                     </div>
                     <div class="won-check">
                         <div class="radio">
-                            <input id="radio"  type="radio"  onchange="changeButtonBackground()" name="name">
+                            <input id="radio"  type="radio"  onchange="changeButtonBackground()" name="name" value="Масштабирование">
                         </div>
                         <div class="radio-text">
                             <p>Масштабирование</p>
@@ -389,7 +393,7 @@
                     </div>
                     <div class="won-check d_f">
                         <div class="radio">
-                            <input id="radio"  type="radio"  onchange="changeButtonBackground()"name="name">
+                            <input id="radio"  type="radio"  onchange="changeButtonBackground()"name="name" value="Любой">
                         </div>
                         <div class="radio-text ">
                             <p>Любой</p>
@@ -397,6 +401,7 @@
                     </div>
                     <div class="line-white"></div>
                 </div>
+            </form>
                 <div class="name-deck">
                     <div class="bir">
                         <p>Страна</p>
@@ -406,7 +411,7 @@
                     </div>
                 </div>
                 <div class="input-element-3">
-                    <input type="text" placeholder="Не обязательно">
+                    <input id ="input-country" type="text" placeholder="Не обязательно">
                 </div>
                 <div class="name-deck">
                     <div class="bir">
@@ -417,14 +422,14 @@
                     </div>
                 </div>
                 <div class="input-element-3 dd">
-                    <input type="text" placeholder="Не обязательно">
+                    <input id ="input-gorod" type="text" placeholder="Не обязательно">
                 </div>
                 <div class="bnt-next">
                     <div class="btn-nazad" onclick="nazad4()">
                         <button><span><i class='bx bx-left-arrow-alt' ></i></span> Назад</button>
                     </div>
                     <div class="btn-next-prev" onclick="next4()">
-                        <button id="next4-btn">Далее <span><i class='bx bx-right-arrow-alt'></i></span></button>
+                        <button   id="next4-btn">Далее <span><i class='bx bx-right-arrow-alt'></i></span></button>
                     </div>
                 </div>
             </div>
@@ -442,28 +447,34 @@
             </div>
             <div class="kofaunder-blog" id="bir">
                 <div class="checkbox-blog-info">
-                    <div class="checkbox-blog-1">
-                         <div class="input-checkbox2">
+                    <div class="checkbox-blog-1" onclick="inputsic('опцион')">
+
+                         <div class="input-checkbox2" >
                                 <span style="display: none;" id="span1"><i class='bx bx-check'></i></span>
                             </div>
-                        <div class="input-text">
+
+
+                        <div class="input-text" >
                             <p>опцион</p>
                         </div>
                     </div>
-                    <div class="checkbox-blog-1">
+                    <div class="checkbox-blog-1" onclick="inputsic('фантомный опцион')">
                          <div class="input-checkbox2">
                                 <span style="display: none;" id="span1"><i class='bx bx-check'></i></span>
                             </div>
-                        <div class="input-text">
+
+
+                        <div class="input-text" >
                             <p>фантомный опцион</p>
                         </div>
                     </div>
                     
-                    <div class="checkbox-blog-1">
+                    <div class="checkbox-blog-1" onclick="inputsic('партнерство')">
                          <div class="input-checkbox2">
                                 <span style="display: none;" id="span1"><i class='bx bx-check'></i></span>
                             </div>
-                        <div class="input-text">
+
+                        <div class="input-text" >
                             <p>партнерство</p>
                         </div>
                     </div>
@@ -491,7 +502,7 @@
                     </div>
                 </div>
                 <div class="input-element-3">
-                    <input type="text" placeholder="https://">
+                    <input id = "url-project" type="text" placeholder="https://">
                 </div>
                 <div class="img-file">
                     <div class="img-min">
@@ -507,7 +518,7 @@
                         <button><span><i class='bx bx-left-arrow-alt' ></i></span> Назад</button>
                     </div>
                     <div class="btn-next-prev" onclick="next5()">
-                        <button id="next5-btn">Далее   <span><i class='bx bx-right-arrow-alt'></i></span></button>
+                        <button  id="next5-btn">Далее   <span><i class='bx bx-right-arrow-alt'></i></span></button>
                     </div>
                 </div>
             </div>
@@ -530,59 +541,39 @@
             </div>
         </div>
         <div class="bu">
-            <p class="descri">Так будет выглядеть ваш пост</p>
+            <p class="descri" >Так будет выглядеть ваш пост</p>
         </div>
 
         <div class="card-container">
             <div class="card-padding">
-                <!-- <div class="card-day d_p">
-                    <div class="day center">
-                        <span>вчера</span>
-                    </div>
-                    <div class="love center">
-                        <i id="love1" onclick="love()" class='bx bx-heart' style='color:#83A1C9'  ></i>
-                        <i onclick="loveExit()" id="none1" class='bx bxs-heart'  ></i>
-                    </div>
-                </div> -->
                 <div class="card-title">
-                    <span>Название проекта из Шага 3 максимум в две строчки</span>
+                    <span id = "itogname">Название проекта из Шага 3 максимум в две строчки</span>
                 </div>
                 <div class="card-title">
-                    <span>Senior:</span> <span class="ass">фандрейзер, СТО</span>
+                    <span>Кто нужен:</span> 
+                    <span class="ass" id = "luser"></span>
                 </div>
                 <div class="card-img-back-2"></div>
-                <div class="card-title-3">
-                    <span>Есть первые пользователи / продажи</span>
+                <div class="card-title-3" id = "procsero">
+      
                 </div>
-                <div class="card-blog-df">
-                    <button>Robotics</button>
-                    <button>AR/VR</button>
-                    <button>Web3</button>
-                    <button>Bigdata</button>
-                    <button>GameDev</button>
+                <div class="card-blog-df" id = "listprof">
+                    
+    
                 </div>
                 <div class="watch" id="watchNone2">
                     <span onclick="openWatch2()">Смотреть</span>
                 </div>
      <div class="indo-watch" id="watch-2">
-                    <div class="info-test-p">
+                    <div class="info-test-p" id ="desreaser">
                         <p>Полный текст поста на ограниченное количество символов. Счетчик оставшихся символов должен работать в режиме реального времени.
                             Выводим полный текст поста на ограниченное количество символов. Счетчик оставшихся символов должен работать в режиме реального времени.</p>
                     </div>
-                    <div class="info-test-p">
-                        <p>Полный текст поста на ограниченное количество символов. Счетчик оставшихся символов должен работать в режиме реального времени.
-                            Выводим полный текст поста на ограниченное количество символов. Счетчик оставшихся символов должен работать в режиме реального времени.</p>
-                    </div>
+ 
                     <div class="info-text-p-left">
-                        <p>Интересует стадия проекта:</p>
-                        <div class="left-text">
-                            <span>Учебный проект</span> <br>
-                            <span>Хакатон</span> <br>
-                            <span>Идея / концепция</span> <br>
-                            <span>Запуск стартапа / нет продаж</span> <br>
-                            <span>Есть первые пользователи / продажи</span> <br>
-                            <span>Масштабирование</span> <br>
-                            <span>Любой</span> <br>
+                        <p>Стадия проекта:</p>
+                        <div class="left-text" id = "proall">
+                            
                         </div>
                     </div>
                     <div class="location">
@@ -598,7 +589,7 @@
                                 <img src="./accsets/image/Qstn.svg" alt="">
                             </div>
                         </div>
-                        <div class="mativatsiya-btn">
+                        <div class="mativatsiya-btn" id = "mova">
                             <button>Опцион</button>
                             <button>Фантомный опцион</button>
                             <button>Партнерство</button>
@@ -806,4 +797,9 @@
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="./accsets/js/ekran.js"></script>
 </body>
+
+
+<script>
+
+</script>
 </html>
