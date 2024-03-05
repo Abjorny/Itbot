@@ -12,7 +12,7 @@
 
 
 
-    <div class="container">
+<div class="container">
         <div class="logo d_f">
             <div class="block-1">
                 <div class="x">
@@ -154,7 +154,7 @@
                 </div>
             </div>
             
-    </div>
+</div>
     <div class="modal-vapros" id="vaprosNone">
         <div class="vapros-df">
             <div class="vapros-dv">
@@ -243,7 +243,7 @@
                         </div>
                     </div>
                     
-                    <div class="mativatsiya-btn">
+<div class="mativatsiya-btn">
                         <button>Опцион</button>
                         <button>Фантомный опцион</button>
                         <button>Партнерство</button>
@@ -330,7 +330,7 @@
                 
 
             </div>
-            <div class="line-filter"></div>
+<div class="line-filter"></div>
             <div class="filter-block-2">
                 <div class="tepa-block d_f" onclick="openBlock2()">
                     <div class="name-tepa">
