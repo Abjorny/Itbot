@@ -226,6 +226,7 @@ function test() {
     document.querySelector(".thanks").style=`display:block`
     document.querySelector("body").style=`background:#EEEEEE`
     document.querySelector(".container").style=`display:none`
+    tg.close()
   }
   function relod(){
     window.location='/'
