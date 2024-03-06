@@ -1,5 +1,5 @@
 
-tg =window.Telegram.WebApp()
+tg =window.Telegram.WebApp
 var checkboxes = document.getElementsByClassName('input-checkbox');
 
 Array.from(checkboxes).forEach(function(checkbox) {
