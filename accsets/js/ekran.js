@@ -1,5 +1,5 @@
 
-tg =window.Telegram.WebApp
+// tg =window.Telegram.WebApp()
 var checkboxes = document.getElementsByClassName('input-checkbox');
 
 Array.from(checkboxes).forEach(function(checkbox) {
@@ -68,7 +68,11 @@ function push() {
     const inputElement = document.querySelector('#input-push1');
     const value = inputElement.value;
 
-    if (value !== '') {
+    console.log(value)
+
+    a = newData.indexOf(String(value))
+    if (value !== '' & datas.brand.length + newData.length <=4) {
+      if( a ==-1){
         newData.push(value);
         document.querySelector(".input-variant button").style=`background:#83A1C9;`
         document.querySelector(".btn-next-prev button").style=`background:#2F80ED;`
@@ -82,6 +86,12 @@ function push() {
             .join('');
 
         inputElement.value = '';
+      }
+      else{
+        console.log('есть такое');
+        datas.motiva.splice(a, 1);
+      }
+
 
     }
     
@@ -102,21 +112,7 @@ function minus(key) {
 }
 
 
-function next() {
-  var nextButton = document.querySelector(".btn-next-prev button");
-  var computedStyle = getComputedStyle(nextButton);
-  var nextButtonBgColor = computedStyle.backgroundColor;
 
-  if (nextButtonBgColor === 'rgb(47, 128, 237)') {
-    document.getElementById("birincisi").style.display = "none";
-    document.getElementById("ikincisi").style.display = "block";
-
-    document.querySelector(".line-avtive-1").style.background = "#E5E5E5";
-    document.querySelector(".line-avtive-2").style.background = "#83A1C9";
-  } else {
-    console.log('hello');
-  }
-}
 
 var newData2 = []
 
@@ -198,31 +194,14 @@ function test() {
     document.querySelector(".line-avtive-5").style=` background: #83A1C9;`
   }
 
-  function next2(){
 
-    var nextButton = document.querySelector("#next2-btn");
-    var computedStyle = getComputedStyle(nextButton);
-    var nextButtonBgColor = computedStyle.backgroundColor;
-  
-    if (nextButtonBgColor === 'rgb(47, 128, 237)') {
-      document.getElementById("ikincisi").style.display = "none";
-      document.getElementById("uchinchisi").style.display = "block";
-  
-      document.querySelector(".line-avtive-2").style.background = "#E5E5E5";
-      document.querySelector(".line-avtive-3").style.background = "#83A1C9";
-    } else {
-      console.log('hello2');
-    }
-
-  }
 
 
 
 
 
   function next6(){
-    tg.sendData(JSON.stringify(datas))
-     // tg.sendData("zxc")
+    // tg.sendData(datas)
     document.querySelector(".main-2").style=`display:none`
     document.querySelector(".thanks").style=`display:block`
     document.querySelector("body").style=`background:#EEEEEE`
@@ -408,40 +387,8 @@ function textaria(){
    
   });
 
- function next3(){
-    nameApp = document.getElementById("textarea2");
-    discpr = document.getElementById("textaria");
-    console.log(nameApp.value);
-    console.log(discpr.value);
-    datas.name = nameApp.value;
-    datas.discpr = discpr.value;
-    document.getElementById("uchinchisi").style=`display:none`
-    document.getElementById("tortinchisi").style=`display:block`
-    document.querySelector(".line-avtive-3").style=` background: #E5E5E5;`
-    document.querySelector(".line-avtive-4").style=` background: #83A1C9;`
-  }
-  function next4(){
-    
-    a = document.getElementById("dataformer");
-    const formData = new FormData(a)
-    count = document.getElementById('input-country').value;
-    gorod = document.getElementById('input-gorod').value;
-    tape = formData.get('name')
-
-    datas.country = count
-    datas.gorod = gorod
-    datas.process = tape
 
 
-    console.log(datas.country,datas.gorod,datas.process)
-    document.getElementById("tortinchisi").style=`display:none`
-    document.getElementById("besh").style=`display:block`
-   
-
-    document.querySelector(".line-avtive-4").style=` background: #E5E5E5;`
-    document.querySelector(".line-avtive-5").style=` background: #83A1C9;`
-
-  }
   
   function inputsic(value){
     a = datas.motiva.indexOf(String(value))
@@ -462,11 +409,11 @@ function textaria(){
     datas.url  = url.value
 
     
-    
+    if (datas.motiva !=null & datas.motiva !=""){
     console.log(datas.model,datas.motiva)
     document.querySelector(".main-2").style=`display:block`
+    console.log(datas.name)
     document.getElementById('itogname').innerHTML = datas.name
-     = +String(datas.process)
     document.getElementById('desreaser').innerHTML =String(datas.discpr) + "<br>"
 
     var z =""
@@ -493,11 +440,93 @@ function textaria(){
     document.getElementById('luser').innerHTML = d
     document.getElementById('proall').innerHTML ="<span>" +String(datas.process) +"</span> <br>"
     document.getElementById('procsero').innerHTML="<span>" +String(datas.process) +"</span> "
-
+    document.getElementById('ssale').innerHTML="<span>" +String(datas.url) +"</span> "
+    document.getElementById('mesto').innerHTML=String(datas.country) + ", " + String(datas.gorod) 
     document.querySelector(".main").style=`display:none`
     document.querySelector("body").style=`background:#EEEEEE`
     document.querySelector("#becka").style=`background:none `
 
     document.querySelector("#te").style=` background: #E5E5E5;`
     document.querySelector("#tes").style=` background: #83A1C9;`
+  }
+  }
+  function next() {
+    var nextButton = document.querySelector(".btn-next-prev button");
+    var computedStyle = getComputedStyle(nextButton);
+    var nextButtonBgColor = computedStyle.backgroundColor;
+    console.log(datas.brand.length )
+    if (datas.brand.length>0  & datas.brand.length<=3 & datas.brand.length +newData.length<=6 ) {
+      if (newData.length>0){
+        for(var i = 0; i<newData.length;i++){
+          datas.brand.push(newData[i])
+          console.log(datas.brand)
+        }
+      }
+
+      document.getElementById("birincisi").style.display = "none";
+      document.getElementById("ikincisi").style.display = "block";
+  
+      document.querySelector(".line-avtive-1").style.background = "#E5E5E5";
+      document.querySelector(".line-avtive-2").style.background = "#83A1C9";
+    } else {
+      console.log('hello');
+    }
+  }
+  function next2(){
+
+    var nextButton = document.querySelector("#next2-btn");
+    var computedStyle = getComputedStyle(nextButton);
+    var nextButtonBgColor = computedStyle.backgroundColor;
+  
+    if (datas.model.length>0  & datas.model.length<=5) {
+      document.getElementById("ikincisi").style.display = "none";
+      document.getElementById("uchinchisi").style.display = "block";
+  
+      document.querySelector(".line-avtive-2").style.background = "#E5E5E5";
+      document.querySelector(".line-avtive-3").style.background = "#83A1C9";
+    } else {
+      console.log('hello2');
+    }
+
+  }
+
+  function next3(){
+  
+    nameApp = document.getElementById("textarea2");
+    discpr = document.getElementById("textaria");
+    console.log(nameApp.value);
+    console.log(discpr.value);
+    datas.name = nameApp.value;
+    datas.discpr = discpr.value;
+    if (datas.name != "" & datas.discpr!=""){
+    document.getElementById("uchinchisi").style=`display:none`
+    document.getElementById("tortinchisi").style=`display:block`
+    document.querySelector(".line-avtive-3").style=` background: #E5E5E5;`
+    document.querySelector(".line-avtive-4").style=` background: #83A1C9;`
+    }
+  }
+  function next4(){
+    
+    a = document.getElementById("dataformer");
+    const formData = new FormData(a)
+    count = document.getElementById('input-country').value;
+    gorod = document.getElementById('input-gorod').value;
+    tape = formData.get('name')
+
+    datas.country = count
+    datas.gorod = gorod
+    datas.process = tape
+
+
+    console.log(datas.country,datas.gorod,datas.process)
+    if (datas.process != null){
+      console.log(datas.process)
+    document.getElementById("tortinchisi").style=`display:none`
+    document.getElementById("besh").style=`display:block`
+   
+
+    document.querySelector(".line-avtive-4").style=` background: #E5E5E5;`
+    document.querySelector(".line-avtive-5").style=` background: #83A1C9;`
+    }
+
   }
