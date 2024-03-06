@@ -1,5 +1,5 @@
 
-// tg =window.Telegram.WebApp()
+tg =window.Telegram.WebApp()
 var checkboxes = document.getElementsByClassName('input-checkbox');
 
 Array.from(checkboxes).forEach(function(checkbox) {
@@ -201,12 +201,12 @@ function test() {
 
 
   function next6(){
-    // tg.sendData(datas)
+    tg.sendData(datas)
     document.querySelector(".main-2").style=`display:none`
     document.querySelector(".thanks").style=`display:block`
     document.querySelector("body").style=`background:#EEEEEE`
     document.querySelector(".container").style=`display:none`
-    // tg.close()
+    tg.close()
   }
   function relod(){
     window.location='/'
