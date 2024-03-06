@@ -312,7 +312,7 @@ var datas = {
              brand: new Array ( ),
              model: new Array ( ),
              name: new Text,
-             disc: new Text,
+             discpr: new Text,
              process: new Text,
              country: new Text,
              gorod: new Text,
