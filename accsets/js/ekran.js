@@ -240,7 +240,7 @@ function closeWatch2(){
 
 
 function openPakazad(){
-      console.log(tg.initDataUnsafe.user)
+      console.log(tg.tg.initDataUnsafe.user.id)
   document.querySelector("#pakazad").style=`display:flex`
   document.querySelector("#pakazad1").style=`display:flex`
   document.getElementById('contatow').innerHTML =tg.WebAppUser.username
