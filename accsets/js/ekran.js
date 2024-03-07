@@ -242,7 +242,7 @@ function openPakazad(){
       console.log(tg.initDataUnsafe.user)
   document.querySelector("#pakazad").style=`display:flex`
   document.querySelector("#pakazad1").style=`display:flex`
-  document.getElementById('contatow').innerHTML =tg.initDataUnsafe.user
+  document.getElementById('contatow').innerHTML =tg.initDataUnsafe.user.username
   // + (tg.initDataUnsafe.user.username) 
   document.querySelector("#yopil1").style=`display:none`
 }
