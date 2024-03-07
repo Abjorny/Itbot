@@ -1,7 +1,7 @@
 
 tg =window.Telegram.WebApp
 
-  tg.showAlert("Хорошо, ты нажал на главную кнопку.");
+  tg.showAlert(tg.WebAppUser.username);
 var checkboxes = document.getElementsByClassName('input-checkbox');
 
 Array.from(checkboxes).forEach(function(checkbox) {
