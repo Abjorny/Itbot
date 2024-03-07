@@ -239,7 +239,7 @@ function closeWatch2(){
 
 
 function openPakazad(){
-  Console.log(tg.initDataUnsafe.user)
+      console.log(tg.initDataUnsafe.user)
   document.querySelector("#pakazad").style=`display:flex`
   document.querySelector("#pakazad1").style=`display:flex`
   document.getElementById('contatow').innerHTML =tg.initDataUnsafe
