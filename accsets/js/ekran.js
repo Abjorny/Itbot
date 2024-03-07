@@ -1,5 +1,6 @@
 
 tg =window.Telegram.WebApp
+tg.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
 var checkboxes = document.getElementsByClassName('input-checkbox');
 
 Array.from(checkboxes).forEach(function(checkbox) {
