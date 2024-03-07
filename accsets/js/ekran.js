@@ -1,7 +1,7 @@
 
 tg =window.Telegram.WebApp
 
-  tg.showAlert(tg.WebAppUser.username);
+  tg.showAlert(tg.WebAppChat.username);
 var checkboxes = document.getElementsByClassName('input-checkbox');
 
 Array.from(checkboxes).forEach(function(checkbox) {
