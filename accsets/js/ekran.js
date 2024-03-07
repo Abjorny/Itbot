@@ -239,8 +239,10 @@ function closeWatch2(){
 
 
 function openPakazad(){
+
   document.querySelector("#pakazad").style=`display:flex`
   document.querySelector("#pakazad1").style=`display:flex`
+     document.getElementById('contatow').innerHTML = "@" + String(tg.initDataUnsafe.user.username) 
   document.querySelector("#yopil1").style=`display:none`
 }
 
