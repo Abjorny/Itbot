@@ -1,0 +1,717 @@
+.calcu_bank {
+    background-color: #F8F8F8;
+    height: auto;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Добавляем wrap для переноса на новую строку */
+}
+.name_bank_table{
+    left: 302px;
+}
+.procent_bank_table{
+left: 758px;
+}
+.price_bank_table{
+    left: 1204px;
+}
+.bank_zagolovok_bank{
+    margin-left: 406px;
+}
+.bank_zagolovok_stavka{
+    margin-left: 406px;
+}
+.bank_zagolovok_price{
+    margin-left: 281px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.calcu_bank_content_table{
+    background-color: #FFFFFF;
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 0px;
+    flex-wrap: wrap; 
+}
+.calcu_bank_Selected_contaier {
+    white-space: nowrap; 
+    position: relative;
+    display: flex; 
+}
+@media (min-width: 0px) and (max-width: 428px) {
+    
+    .name_bank_table{
+        font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        left: 30px;
+        top:-35px;
+    }
+    .procent_bank_table{
+        font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        left: 30px;
+ 
+    }
+    .price_bank_table{
+        font-family: "Manrope", sans-serif;
+        font-weight: 600;
+        left: 243px;
+
+    }
+    .calcu_bank_Selected_Pravo,
+    .calcu_bank_Selected_garant,
+    .calcu_bank_Selected_price,
+    .calcu_bank_Selected_data  {
+        position: relative;
+        z-index: 0;
+        margin-top: 53px;
+        flex: 0;
+    }
+    
+    .calcu_bank_Selected_Pravo {
+        margin-top: 79px;
+        margin-left: 17px;
+    }
+    
+    .calcu_bank_Selected_garant {
+        margin-left: 17px;
+        flex: 2;
+        
+    }
+    
+    .calcu_bank_Selected_price {
+        margin-left: 17px;
+        margin-top: 25px;
+    }
+    
+    .calcu_bank_Selected_data {
+         flex: 0;
+         margin-left: 17px;
+         margin-top: 25px;
+    }
+    
+    .calcu_bank span {
+        z-index: 1;
+        font-family: "Manrope", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        position: absolute;
+        top: -22px;
+    }
+    
+    .calcu_bank select {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 393px;
+        height: 60px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        box-sizing: border-box;
+        outline: none;
+        background: #fff url('Vector.svg') no-repeat right 18.95px center;
+    }
+    .calcu_bank input {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 393px;
+        height: 60px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        outline: none;
+        box-sizing: border-box;
+    
+    
+    }
+    .calcu_bank_Selected_data input {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 393px;
+        height: 60px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        outline: none;
+        box-sizing: border-box;
+    
+    
+    
+    
+    }
+    .calcu_bank_Selected_data img {
+        z-index: 0;
+        position: absolute;
+        left: 240px;
+        top:15px;
+        width: 50%;
+        height: 50%;
+        background-position: 340px center;
+    
+    
+    }
+    .calcu_bank_button{
+        background-color:#08A652 ;
+        border: none;
+        border-radius: 5px;
+        color: #FFFFFF;
+        width: 393px;
+        position: relative;
+        z-index: 0;
+        margin-left: 17px;
+        margin-top: 25px; /* Отступ сверху между дополнительными селекторами */
+        height: 60px;
+    }
+    .bank_zagolovok_bank{
+        display: none;
+        margin-left: 270px;
+        box-sizing: border-box;
+    }
+    .bank_zagolovok_stavka{
+            margin-left: 270px;
+            display: none;
+            box-sizing: border-box;
+    }
+    .bank_zagolovok_price{
+        display: none;
+        margin-left: 187px;
+        box-sizing: border-box;
+    }
+    
+    .calcu_bank_Selected_contaier span {
+        position: relative;
+        margin-top: 151px;
+        flex: 0;
+        left: -200px;
+        color:#000000;
+        font-family: "Manrope", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 1;
+    }
+    .calcu_bank_table span{
+        position: absolute;
+        z-index: 0;
+        margin-top: -55px;
+        flex: 0;
+        color:#000000;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 1;
+        box-sizing: border-box;
+    
+    }
+    .calcu_bank_table{
+        position: relative;
+        margin-top: 100px;
+        white-space: nowrap; 
+        border: 1px solid black; 
+        display: flex; 
+        width: 100%;
+        min-width: 100%;
+
+
+    }
+}
+@media (min-width: 600px) and (max-width: 1400px) {
+    .name_bank_table{
+        left: 72px;
+    }
+    .procent_bank_table{
+    left: 380px;
+    }
+    .price_bank_table{
+        left: 694px;
+    }
+    .calcu_bank_Selected_Pravo,
+    .calcu_bank_Selected_garant,
+    .calcu_bank_Selected_price,
+    .calcu_bank_Selected_data  {
+        position: relative;
+        z-index: 0;
+        margin-top: 75px;
+        flex: 0;
+    }
+    
+    .calcu_bank_Selected_Pravo {
+        margin-left: 75px;
+    }
+    
+    .calcu_bank_Selected_garant {
+        margin-left: 57px;
+        flex: 2;
+    }
+    
+    .calcu_bank_Selected_price {
+        margin-left: 75px;
+        margin-top: 20px; /* Отступ сверху между дополнительными селекторами */
+        flex-basis: 100%; /* Чтобы каждый селектор занимал всю доступную ширину */
+        
+    }
+    
+    .calcu_bank_Selected_data {
+         flex: 0;
+         margin-left: 395px;
+        margin-top: -41px; /* Отступ сверху между дополнительными селекторами */
+    
+    }
+    
+    .calcu_bank span {
+        z-index: 1;
+        font-family: "Manrope", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        position: absolute;
+        top: -22px;
+    }
+    
+    .calcu_bank select {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 262px;
+        height: 40px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        box-sizing: border-box;
+        outline: none;
+        background: #fff url('Vector.svg') no-repeat right 18.95px center;
+    }
+    .calcu_bank input {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 262px;
+        height: 40px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        outline: none;
+        box-sizing: border-box;
+    
+    
+    }
+    .calcu_bank_Selected_data input {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 262px;
+        height: 40px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        outline: none;
+        box-sizing: border-box;
+    
+    
+    
+    
+    }
+    .calcu_bank_Selected_data img {
+        z-index: 0;
+        position: absolute;
+        left: 166px;
+        top:8px;
+        width: 50%;
+        height: 50%;
+        background-position: 340px center;
+    
+    
+    }
+    .calcu_bank_button{
+        background-color:#08A652 ;
+        border: none;
+        border-radius: 5px;
+        color: #FFFFFF;
+        width: 156px;
+        position: relative;
+        z-index: 0;
+        margin-left: 682px;
+        margin-top: -41px; /* Отступ сверху между дополнительными селекторами */
+        height: 40px;
+    }
+    .bank_zagolovok_bank{
+        margin-left: 270px;
+        box-sizing: border-box;
+    }
+    .bank_zagolovok_stavka{
+            margin-left: 270px;
+            box-sizing: border-box;
+    }
+    .bank_zagolovok_price{
+        margin-left: 187px;
+        box-sizing: border-box;
+    }
+    
+    .calcu_bank_Selected_contaier span {
+        position: relative;
+        margin-top: 151px;
+        flex: 0;
+        left: -200px;
+        color:#000000;
+        font-family: "Manrope", sans-serif;
+        font-size: 15px;
+        font-weight: 500;
+        z-index: 1;
+    }
+    .calcu_bank_table span{
+        position: absolute;
+        z-index: 0;
+        margin-top: -55px;
+        flex: 0;
+        color:#000000;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 1;
+        box-sizing: border-box;
+    
+    }
+    .calcu_bank_table{
+        position: relative;
+        margin-top: 100px;
+        white-space: nowrap; 
+        border: 2px solid black; 
+        display: flex; 
+        width: 100%;
+        min-width: 100%;
+
+
+    }
+}
+@media (min-width: 1400px) and (max-width: 1599px) {
+
+
+    .calcu_bank_Selected_Pravo,
+    .calcu_bank_Selected_garant,
+    .calcu_bank_Selected_price,
+    .calcu_bank_Selected_data  {
+        position: relative;
+        z-index: 0;
+        margin-top: 75px;
+        flex: 0;
+    }
+    
+    .calcu_bank_Selected_Pravo {
+        margin-left: 150px;
+    }
+    
+    .calcu_bank_Selected_garant {
+        margin-left: 57px;
+        flex: 2;
+    }
+    
+    .calcu_bank_Selected_price {
+        margin-left: 150px;
+        margin-top: 20px; /* Отступ сверху между дополнительными селекторами */
+        flex-basis: 100%; /* Чтобы каждый селектор занимал всю доступную ширину */
+        
+    }
+    
+    .calcu_bank_Selected_data {
+         flex: 0;
+        margin-left: 598px;
+        margin-top: -61px; /* Отступ сверху между дополнительными селекторами */
+    
+    }
+    
+    .calcu_bank span {
+        z-index: 1;
+        font-family: "Manrope", sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        position: absolute;
+        top: -22px;
+    }
+    
+    .calcu_bank select {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 393px;
+        height: 60px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        box-sizing: border-box;
+        outline: none;
+        background: #fff url('Vector.svg') no-repeat right 18.95px center;
+    }
+    .calcu_bank input {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 393px;
+        height: 60px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        outline: none;
+        box-sizing: border-box;
+    
+    
+    }
+    .calcu_bank_Selected_data input {
+        appearance: none;
+        background-color: #FFFFFF;
+        width: 393px;
+        height: 60px;
+        border: 1px solid #B1B1B1;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 10px;
+        padding-left: 22px;
+        outline: none;
+        box-sizing: border-box;
+    
+    
+    
+    
+    }
+    .calcu_bank_Selected_data img {
+        z-index: 0;
+        position: absolute;
+        left: 340px;
+        top:12px;
+        background-position: 340px center;
+    
+    
+    }
+    .calcu_bank_button{
+        background-color:#08A652 ;
+        border: none;
+        border-radius: 5px;
+        color: #FFFFFF;
+        width: 235px;
+        position: relative;
+        z-index: 0;
+        margin-left: 1002px;
+        margin-top: -61px; /* Отступ сверху между дополнительными селекторами */
+        height: 60px;
+    }
+    
+    
+    
+    .calcu_bank_Selected_contaier span {
+        position: relative;
+        margin-top: 151px;
+        flex: 0;
+        left: -250px;
+        color:#000000;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 1;
+    }
+    .calcu_bank_table span{
+        position: absolute;
+        z-index: 0;
+        margin-top: -55px;
+        flex: 0;
+        color:#000000;
+        font-family: "Manrope", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        z-index: 1;
+        box-sizing: border-box;
+    
+    }
+    .calcu_bank_table{
+        position: relative;
+        margin-top: 100px;
+        white-space: nowrap; 
+        border: 2px solid black; 
+        display: flex; 
+        width: 100%;
+        left:-150px;
+        justify-content: center; /* Центрирование по горизонтали */
+        align-items: center;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+}
+
+@media (min-width: 1600px) {
+
+.calcu_bank_Selected_Pravo,
+.calcu_bank_Selected_garant,
+.calcu_bank_Selected_price,
+.calcu_bank_Selected_data  {
+    position: relative;
+    z-index: 0;
+    margin-top: 151px;
+    flex: 0;
+}
+
+.calcu_bank_Selected_Pravo {
+    margin-left: 301px;
+}
+
+.calcu_bank_Selected_garant {
+    margin-left: 57px;
+    flex: 2;
+}
+
+.calcu_bank_Selected_price {
+    margin-left: 301px;
+    margin-top: 20px; /* Отступ сверху между дополнительными селекторами */
+    flex-basis: 100%; /* Чтобы каждый селектор занимал всю доступную ширину */
+    
+}
+
+.calcu_bank_Selected_data {
+     flex: 0;
+    margin-left: 751px;
+    margin-top: -61px; /* Отступ сверху между дополнительными селекторами */
+
+}
+
+.calcu_bank span {
+    z-index: 1;
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: -22px;
+}
+
+.calcu_bank select {
+    appearance: none;
+    background-color: #FFFFFF;
+    width: 393px;
+    height: 60px;
+    border: 1px solid #B1B1B1;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding-left: 22px;
+    box-sizing: border-box;
+    outline: none;
+    background: #fff url('Vector.svg') no-repeat right 18.95px center;
+}
+.calcu_bank input {
+    appearance: none;
+    background-color: #FFFFFF;
+    width: 393px;
+    height: 60px;
+    border: 1px solid #B1B1B1;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding-left: 22px;
+    outline: none;
+    box-sizing: border-box;
+
+
+}
+.calcu_bank_Selected_data input {
+    appearance: none;
+    background-color: #FFFFFF;
+    width: 393px;
+    height: 60px;
+    border: 1px solid #B1B1B1;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding-left: 22px;
+    outline: none;
+    box-sizing: border-box;
+
+
+
+
+}
+.calcu_bank_Selected_data img {
+    z-index: 0;
+    position: absolute;
+    left: 340px;
+    top:12px;
+    background-position: 340px center;
+
+
+}
+.calcu_bank_button{
+    background-color:#08A652 ;
+    border: none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    width: 235px;
+    position: relative;
+    z-index: 0;
+    margin-left: 1202px;
+    margin-top: -61px; /* Отступ сверху между дополнительными селекторами */
+    height: 60px;
+}
+
+
+
+.calcu_bank_Selected_contaier span {
+    position: relative;
+    margin-top: 151px;
+    flex: 0;
+    left: -100px;
+    color:#000000;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    z-index: 1;
+}
+.calcu_bank_table span{
+    position: absolute;
+    z-index: 0;
+    margin-top: -55px;
+    flex: 0;
+    color:#000000;
+    font-family: "Manrope", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    z-index: 1;
+    box-sizing: border-box;
+
+}
+.calcu_bank_table{
+    position: relative;
+    margin-top: 100px;
+    white-space: nowrap; 
+    border: 2px solid black; 
+    display: flex; 
+    width: 100%;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center;
+    outline: none;
+    box-sizing: border-box;
+}
+}
